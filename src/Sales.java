@@ -3,46 +3,36 @@ public class Sales {
     private int houseNumber;
     private String postCode;
     private int value;
-    private String date;
+    private int year;
+    private String month;
 
     //constructor to store and retrieve
 
-    public Sales(int houseNumber, String postCode, int value, String date) {
+    public void SalesConstructor(int houseNumber, String postCode, int value, int year, String month) {
         this.houseNumber = houseNumber;
         this.postCode = postCode;
         this.value = value;
-        this.date = date;
+        this.year = year;
+        this.month = month;
     }
 
     public int getHouseNumber(){
         return houseNumber;
     }
 
-    public void setHouseNumber(int houseNumber){
-        this.houseNumber = houseNumber;
-    }
-
     public String getPostCode() {
         return postCode;
-    }
-
-    public void setPostCode(String postCode) {
-        this.postCode = postCode;
     }
 
     public int getValue() {
         return value;
     }
 
-    public void setValue(int value) {
-        this.value = value;
+    public int getYear() {
+        return year;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
+    public String getMonth(){
+        return month;
     }
 }
