@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void ConstructObjects() {
         int number;
         String postCode;
         int value;
@@ -19,7 +19,7 @@ public class Main {
         System.out.println("Enter the postcode");
         postCode = keyboard.next();
 
-        System.out.println("Enter the value as an integer");
+        System.out.println("Enter the price that it was sold as an integer");
         value = keyboard.nextInt();
 
         System.out.println("Enter the year as an integer");
@@ -28,9 +28,9 @@ public class Main {
         System.out.println("Enter the month");
         month = keyboard.next();
 
-        // Create the object in the class and then check if it's written correctly
+        // Create the object in the class and then print it to check if it's written correctly
         Sales object1 = new Sales(number, postCode, value, year, month);
-        System.out.println(object1.toString());
+        System.out.println(object1.toStringSales());
 
         System.out.println("Enter the name of the branch");
         branchName = keyboard.next();
@@ -38,7 +38,7 @@ public class Main {
         List salesList = new ArrayList<Sales>();
         salesList.add(object1);
 
-        // Create the object in the class and then check if it's written correctly
+        // Create the object in the class and then print it to check if it's written correctly
         Branch branch1 = new Branch(branchName, salesList);
         System.out.println(branch1.toStringBranch());
 

@@ -37,7 +37,7 @@ public class Sales {
         return month;
     }
 
-    public String toString(){
+    public String toStringSales(){
         String result = "";
         result = "\nHouse Number: " + houseNumber + "\nPostcode: " + postCode + "\nValue: " + value + "\nYear: " + year + "\nMonth: " + month;
         return result;
