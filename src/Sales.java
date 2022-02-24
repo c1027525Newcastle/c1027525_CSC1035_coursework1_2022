@@ -1,14 +1,13 @@
 public class Sales {
-    //House no, postcode, value, month and year the house was sold
-    private int houseNumber;
-    private String postCode;
-    private int value;
-    private int year;
-    private String month;
+    // Defining:House no, postcode, value, year and month the house was sold
+    public int houseNumber;
+    public String postCode;
+    public int value;
+    public int year;
+    public String month;
 
-    //constructor to store and retrieve
-
-    public void SalesConstructor(int houseNumber, String postCode, int value, int year, String month) {
+    // Creating the constructor
+    public Sales(int houseNumber, String postCode, int value, int year, String month) {
         this.houseNumber = houseNumber;
         this.postCode = postCode;
         this.value = value;
@@ -16,6 +15,8 @@ public class Sales {
         this.month = month;
     }
 
+
+    // Making the getters in case someone wants to know a detail about a specific class
     public int getHouseNumber(){
         return houseNumber;
     }
@@ -34,5 +35,11 @@ public class Sales {
 
     public String getMonth(){
         return month;
+    }
+
+    public String toString(){
+        String result = "";
+        result = "\nHouse Number: " + houseNumber + "\nPostcode: " + postCode + "\nValue: " + value + "\nYear: " + year + "\nMonth: " + month;
+        return result;
     }
 }
