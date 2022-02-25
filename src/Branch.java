@@ -1,9 +1,10 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Branch {
     // name of local branch, list of sales that it has had
     public String name;
-    public List salesObject;
+    static List <Sales> salesObject = new ArrayList<>();
 
     public Branch(String name, List salesObject) {
         this.name = name;
@@ -12,7 +13,8 @@ public class Branch {
 
     public String toStringBranch(){
         String result = "";
-        result = "\nBranch name: " + name + "\nDetails: " + salesObject;
+        result = "\nBranch name: " + name;
+        salesObject.forEach((sale -> System.out.println("Details: " +sale.toStringSales())));
         return result;
     }
 
