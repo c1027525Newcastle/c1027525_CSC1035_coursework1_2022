@@ -35,7 +35,7 @@ public class Main {
 
         // Create the object in the class and then print it to check if it's written correctly
         Sales object = new Sales(number, postCode, value, year, month);
-        System.out.println(object.toStringSales());
+        //System.out.println(object.toStringSales());
 
         System.out.println("Enter the name of the branch");
         branchName = keyboard.next();

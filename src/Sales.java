@@ -15,31 +15,9 @@ public class Sales {
         this.month = month;
     }
 
-
-    // Making the getters in case someone wants to know a detail about a specific class
-    public int getHouseNumber(){
-        return houseNumber;
-    }
-
-    public String getPostCode() {
-        return postCode;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public String getMonth(){
-        return month;
-    }
-
     public String toStringSales(){
-        String result = "";
-        result = "\nHouse Number: " + houseNumber + "\nPostcode: " + postCode + "\nValue: " + value + "\nYear: " + year + "\nMonth: " + month;
+        String result;
+        result = "\nHouse Number:" + houseNumber + "\nPostcode:" + postCode + "\nValue:" + value + "\nYear:" + year + "\nMonth:" + month;
         return result;
     }
 }

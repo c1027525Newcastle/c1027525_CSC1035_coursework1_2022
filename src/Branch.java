@@ -12,9 +12,9 @@ public class Branch {
     }
 
     public String toStringBranch(){
-        String result = "";
-        result = "\nBranch name: " + name;
-        salesObject.forEach((sale -> System.out.println("Details: " +sale.toStringSales())));
+        String result;
+        result = "Branch name:" + name + "\n";
+        salesObject.forEach((sale -> System.out.println("Details:" +sale.toStringSales())));
         return result;
     }
 
