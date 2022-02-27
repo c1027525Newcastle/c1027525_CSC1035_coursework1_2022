@@ -35,7 +35,9 @@ public class ReportingIO{
                     break;
 
                 case "5":
-                    Branch.highestSaleRecorded();
+                    System.out.println("Which branch do you want to look into?");
+                    String branchChosen = s.nextLine();
+                    Branch.highestSaleRecorded(branchChosen);
                     break;
 
                 case "6":
