@@ -30,6 +30,8 @@ public class Main {
         value = keyboard.nextInt();
 
         salesOnly.add(value); //////////////
+        salesOnly.add(number);
+        salesOnly.add(postCode);
         System.out.println(salesOnly);
 
         System.out.println("Enter the year as an integer");
