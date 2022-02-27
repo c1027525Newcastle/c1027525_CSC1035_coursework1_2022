@@ -47,23 +47,30 @@ public class Branch {
 
     public static int averageSale(String branchChosen2, int yearChosen){
         int averageSale = 0;
-        int count = 1;
+        int count = 0;
         List branchSalesList = Main.salesDictionaryYear.get(branchChosen2);
         List salesList = new ArrayList<>();
         int actualSize = branchSalesList.size() -1;
 
         // Go through the values list and see which one has the corresponding year
-        for (int i = 0; i < actualSize; i+=2){
+        for (int i = 0; i < branchSalesList.size(); i+=2){///
             if ((int) branchSalesList.get(i+1) == yearChosen){
                 salesList.add(branchSalesList.get(i));
             }
         }
 
+        // Test if it stores correctly
+        //System.out.println(salesList);
+
         // Go through the list and add everything to the averageSale and keep the count as to know how many elements there are
-        for (int i = 0; i < salesList.size()-1; i++){
+        for (int i = 0; i < salesList.size(); i++){
             count +=1;
             int newSale = (int) salesList.get(i);
             averageSale = averageSale + newSale;
+
+            // To test if everything is okay
+            //System.out.println("1:" + averageSale);
+            //System.out.println("2:" + count);
         }
 
         // Make the actual average sale
