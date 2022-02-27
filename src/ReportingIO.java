@@ -14,7 +14,8 @@ public class ReportingIO{
                     4: Find all sales with value greater than a given amount\s
                     5: Find the highest sale recorded by a branch\s
                     6: Return a list of all sales recorded by a branch with a value greater than a given amount of money\s
-                    7: Exit the system\s""");
+                    7: Return the average sale value recorded by a branch in a given year\s
+                    8: Exit the system\s""");
             String choice = s.nextLine();
             switch(choice){
                 case "1":
@@ -50,6 +51,14 @@ public class ReportingIO{
                     break;
 
                 case "7":
+                    System.out.println("Which branch do you want to look into?");
+                    String branchChosen2 = s.nextLine();
+                    System.out.println("What year?");
+                    int yearChosen = s.nextInt();
+                    System.out.println(Branch.averageSale(branchChosen2, yearChosen));
+                    break;
+
+                case "8":
                     System.out.println("Quitting system");
                     quit = true;
                     break;

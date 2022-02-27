@@ -5,13 +5,14 @@ import java.util.Scanner;
 
 public class Main {
     // Make a main salesList in order to store all Sales object for later use
-    static List <Sales> salesList = new ArrayList<>();
-    static List <Branch> branchList = new ArrayList<>();
+    static List<Sales> salesList = new ArrayList<>();
+    static List<Branch> branchList = new ArrayList<>();
     // Used to add all amounts to a list in order to better find the highest sale
     public static List salesOnly = new ArrayList();
 
-    // Create a dictionary
+    // Create dictionaries
     static Hashtable<String, List> salesDictionary = new Hashtable<>();
+    static Hashtable<String, List> salesDictionaryYear = new Hashtable<>();
 
     public static void ConstructObjects() {
         int number;
@@ -52,7 +53,7 @@ public class Main {
         System.out.println("Enter the name of the branch");
         branchName = keyboard.next();
 
-        List <Sales> salesObject = new ArrayList<>();
+        List<Sales> salesObject = new ArrayList<>();
         salesObject.add(object);
 
         // Create the object in the class and then print it to check if it's written correctly
@@ -68,13 +69,22 @@ public class Main {
         //branchList.forEach((branch -> System.out.println(branch.toStringBranch())));
 
         // Create the dictionary or check if the branch already exists
-        if (salesDictionary.containsKey(branchName)){
+        if (salesDictionary.containsKey(branchName)) {
             salesDictionary.get(branchName).add(value);
             //System.out.println(salesDictionary.get(branchName));
-        }
-        else{
+        } else {
             salesDictionary.put(branchName, new ArrayList<>());
             salesDictionary.get(branchName).add(value);
+        }
+
+        // Create the dictionary with the year
+        if (salesDictionaryYear.containsKey(branchName)) {
+            salesDictionaryYear.get(branchName).add(value);
+            salesDictionaryYear.get(branchName).add(year);
+        } else {
+            salesDictionaryYear.put(branchName, new ArrayList<>());
+            salesDictionaryYear.get(branchName).add(value);
+            salesDictionaryYear.get(branchName).add(year);
         }
     }
 }
