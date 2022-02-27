@@ -53,7 +53,7 @@ public class Branch {
         int actualSize = branchSalesList.size() -1;
 
         // Go through the values list and see which one has the corresponding year
-        for (int i = 0; i < branchSalesList.size(); i+=2){///
+        for (int i = 0; i < branchSalesList.size(); i+=2){
             if ((int) branchSalesList.get(i+1) == yearChosen){
                 salesList.add(branchSalesList.get(i));
             }

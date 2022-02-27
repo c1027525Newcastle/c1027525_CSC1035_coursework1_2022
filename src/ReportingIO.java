@@ -23,7 +23,9 @@ public class ReportingIO{
                     break;
 
                 case "2":
-                    // Do something
+                    System.out.println("Choose a year");
+                    int yearChosen1 = s.nextInt();
+                    System.out.println(Reporting.largestAverage(yearChosen1));
                     break;
 
                 case "3":
