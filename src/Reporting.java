@@ -27,7 +27,8 @@ public class Reporting {
         List salesGreater = new ArrayList();
 
         for (int i = 0; i < actualSize; i+=3){
-            System.out.println(i); ///check
+            // check
+            //System.out.println(i);
             if ((int) Main.salesOnly.get(i) > amountChosen){
                 salesGreater.add(Main.salesOnly.get(i));
             }

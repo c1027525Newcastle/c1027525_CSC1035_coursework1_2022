@@ -32,8 +32,18 @@ public class Branch {
         System.out.println(highestSale);
     }
 
-    public static void valueGreater(){
-        System.out.println("hello");
+    public static List valueGreater(String branchChosen1, int amount){
+        List branchSalesList = Main.salesDictionary.get(branchChosen1);
+        List salesListGreater = new ArrayList<>();
+        System.out.println(amount);
+        int actualSize = branchSalesList.size();
+        for (int i = 0; i<actualSize; i++){
+            int valueToBeChecked = (int) branchSalesList.get(i);
+            if (valueToBeChecked > amount){
+                salesListGreater.add(valueToBeChecked);
+            }
+        }
+        return salesListGreater;
     }
     // return: The average sale value recorded by the branch in a given year
     // return: A list of all sales recorded by the branch with a value greater than a given amount of money
