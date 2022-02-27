@@ -29,10 +29,11 @@ public class Main {
         System.out.println("Enter the price that it was sold as an integer");
         value = keyboard.nextInt();
 
-        salesOnly.add(value); //////////////
+        // Add to the salesOnly list the 3 parameters to identify a sale better and print the list to test it's okay
+        salesOnly.add(value);
         salesOnly.add(number);
         salesOnly.add(postCode);
-        System.out.println(salesOnly);
+        // System.out.println(salesOnly);
 
         System.out.println("Enter the year as an integer");
         year = keyboard.nextInt();

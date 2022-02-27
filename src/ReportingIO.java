@@ -31,7 +31,9 @@ public class ReportingIO{
 
                 case "4":
                     System.out.println("4th");
-                    // Do something
+                    System.out.println("Choose the amount you want");
+                    int amountChosen = s.nextInt();
+                    Reporting.greaterSales(amountChosen);
                     break;
 
                 case "5":
@@ -45,6 +47,3 @@ public class ReportingIO{
         }
     }
 }
-    //menu: enter branch data/sales data, methods to return all things from the branch, exit
-    // after each task return to menu
-
