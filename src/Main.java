@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class Main {
     // Make a main salesList in order to store all Sales object for later use
     static List <Sales> salesList = new ArrayList<>();
-    static List <Branch> branchList = new ArrayList<>(); ////////
+    static List <Branch> branchList = new ArrayList<>();
+    // Used to add all amounts to a list in order to better find the highest sale
+    public static List salesOnly = new ArrayList();
 
     public static void ConstructObjects() {
         int number;
@@ -27,6 +29,9 @@ public class Main {
         System.out.println("Enter the price that it was sold as an integer");
         value = keyboard.nextInt();
 
+        salesOnly.add(value); //////////////
+        System.out.println(salesOnly);
+
         System.out.println("Enter the year as an integer");
         year = keyboard.nextInt();
 
@@ -47,11 +52,12 @@ public class Main {
         Branch branch1 = new Branch(branchName, salesObject);
         //System.out.println(branch1.toStringBranch());
 
-        // Appends the salesObject to the salesList and prints them out  to check if everything is written correctly
+        // Appends the salesObject to the salesList and prints them out to check if everything is written correctly
         salesList.addAll(salesObject);
         //salesList.forEach((sale) -> System.out.println(sale.toStringSales()));
 
+        // Appends the new branch1 object to the branchList and prints them out to check if it's okay
         branchList.add(branch1);
-        branchList.forEach((branch -> System.out.println(branch.toStringBranch())));
+        //branchList.forEach((branch -> System.out.println(branch.toStringBranch())));
     }
 }

@@ -18,6 +18,7 @@ public class Branch {
         return result;
     }
 
-    // return: the sale with the highest value, the average sale value recorded by the branch in a given year,
-    // return:a list of all sales with a value greater than a given amount of money
+    // return: The Sale with the highest value recorded by the branch
+    // return: The average sale value recorded by the branch in a given year
+    // return: A list of all sales recorded by the branch with a value greater than a given amount of money
 }

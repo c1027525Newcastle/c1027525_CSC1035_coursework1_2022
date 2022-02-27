@@ -9,9 +9,10 @@ public class ReportingIO{
             System.out.println("""
 
                     1: Add a new sale to the record\s
-                    2:\s
-                    3:\s
-                    4: Exit the system\s""");
+                    2: Find the branch with largest  average value sale for a given year\s
+                    3: Find the highest sale ever reported\s
+                    4: Find all sales with value greater than a given amount\s
+                    5: Exit the system\s""");
             String choice = s.nextLine();
             switch(choice){
                 case "1":
@@ -20,16 +21,20 @@ public class ReportingIO{
 
                 case "2":
                     System.out.println("2nd");
-                    // return data from the Branch or Sales classes
+                    // Do something
                     break;
 
                 case "3":
                     System.out.println("3rd");
-                    // Do something
+                    Reporting.highestSales();
                     break;
 
                 case "4":
                     System.out.println("4th");
+                    // Do something
+                    break;
+
+                case "5":
                     System.out.println("Quitting system");
                     quit = true;
                     break;
