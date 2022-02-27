@@ -18,7 +18,7 @@ public class Branch {
         return result;
     }
 
-    public static void highestSaleRecorded(String branchChosen){
+    public static int highestSaleRecorded(String branchChosen){
         List branchSalesList = Main.salesDictionary.get(branchChosen);
         int highestSale = (int) branchSalesList.get(0);
         int actualSize = branchSalesList.size() -1;
@@ -29,7 +29,7 @@ public class Branch {
                 highestSale = nextSale;
             }
         }
-        System.out.println(highestSale);
+        return highestSale;
     }
 
     public static List valueGreater(String branchChosen1, int amount){
@@ -46,5 +46,4 @@ public class Branch {
         return salesListGreater;
     }
     // return: The average sale value recorded by the branch in a given year
-    // return: A list of all sales recorded by the branch with a value greater than a given amount of money
 }
