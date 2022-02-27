@@ -32,9 +32,7 @@ public class Reporting {
                 salesGreater.add(Main.salesOnly.get(i));
             }
         }
-        //System.out.println(salesGreater);
         return salesGreater;
     }
     // Find the branch with largest  average value sale for a given years
-    // Find all sales with value greater than a given amounts
 }

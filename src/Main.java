@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.Scanner;
 
@@ -8,6 +9,9 @@ public class Main {
     static List <Branch> branchList = new ArrayList<>();
     // Used to add all amounts to a list in order to better find the highest sale
     public static List salesOnly = new ArrayList();
+
+    // Create a dictionary
+    static Hashtable<String, List> salesDictionary = new Hashtable<>();
 
     public static void ConstructObjects() {
         int number;
@@ -62,5 +66,15 @@ public class Main {
         // Appends the new branch1 object to the branchList and prints them out to check if it's okay
         branchList.add(branch1);
         //branchList.forEach((branch -> System.out.println(branch.toStringBranch())));
+
+        // Create the dictionary or check if the branch already exists
+        if (salesDictionary.containsKey(branchName)){
+            salesDictionary.get(branchName).add(value);
+            //System.out.println(salesDictionary.get(branchName));
+        }
+        else{
+            salesDictionary.put(branchName, new ArrayList<>());
+            salesDictionary.get(branchName).add(value);
+        }
     }
 }
