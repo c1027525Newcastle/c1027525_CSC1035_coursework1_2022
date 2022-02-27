@@ -12,7 +12,8 @@ public class ReportingIO{
                     2: Find the branch with largest  average value sale for a given year\s
                     3: Find the highest sale ever reported\s
                     4: Find all sales with value greater than a given amount\s
-                    5: Exit the system\s""");
+                    5: Find the highest sale recorded by a branch\s
+                    6: Exit the system\s""");
             String choice = s.nextLine();
             switch(choice){
                 case "1":
@@ -34,6 +35,10 @@ public class ReportingIO{
                     break;
 
                 case "5":
+                    Branch.highestSaleRecorded();
+                    break;
+
+                case "6":
                     System.out.println("Quitting system");
                     quit = true;
                     break;

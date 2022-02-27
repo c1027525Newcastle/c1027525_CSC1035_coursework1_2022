@@ -34,5 +34,5 @@ public class Reporting {
         }
         return salesGreater;
     }
-    // Find the branch with largest  average value sale for a given years
+    // Find the branch with the largest average value sale for a given years
 }
