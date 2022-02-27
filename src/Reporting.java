@@ -21,18 +21,19 @@ public class Reporting {
         System.out.println(highestSaleItem);
     }
 
-    public static void greaterSales(int amountChosen){
+    public static List greaterSales(int amountChosen){
         int size = Main.salesOnly.size();
-        int actualSize = size-3;
+        int actualSize = size-2;
         List salesGreater = new ArrayList();
 
         for (int i = 0; i < actualSize; i+=3){
-            System.out.println(i);
+            System.out.println(i); ///check
             if ((int) Main.salesOnly.get(i) > amountChosen){
                 salesGreater.add(Main.salesOnly.get(i));
             }
         }
-        System.out.println(salesGreater);
+        //System.out.println(salesGreater);
+        return salesGreater;
     }
     // Find the branch with largest  average value sale for a given years
     // Find all sales with value greater than a given amounts

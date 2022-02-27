@@ -20,20 +20,17 @@ public class ReportingIO{
                     break;
 
                 case "2":
-                    System.out.println("2nd");
                     // Do something
                     break;
 
                 case "3":
-                    System.out.println("3rd");
                     Reporting.highestSales();
                     break;
 
                 case "4":
-                    System.out.println("4th");
                     System.out.println("Choose the amount you want");
                     int amountChosen = s.nextInt();
-                    Reporting.greaterSales(amountChosen);
+                    System.out.println(Reporting.greaterSales(amountChosen));
                     break;
 
                 case "5":
