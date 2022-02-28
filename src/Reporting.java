@@ -41,13 +41,13 @@ public class Reporting {
         int largestAverage = 0;
 
         for (Map.Entry<String, List> entry : Main.salesDictionaryYear.entrySet()) {
-            int count = 0;
+            int count = 1;
             int average = 0;
 
             List salesList = new ArrayList<>();
             salesList.add(entry.getValue());
 
-            for (int i = 0; i < salesList.size(); i += 2) {
+            for (int i = 0; i < salesList.size()-1; i += 2) {
                 if ((int) salesList.get(i + 1) == yearChosen1) {
                     average = average + (int) salesList.get(i);
                     count +=1;
